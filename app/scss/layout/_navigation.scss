@@ -1,0 +1,85 @@
+.navigation {
+   width: 200px;
+      margin: 0 auto 30px;
+   &__list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+   }
+   display: flex;
+   flex-direction: column;
+   &__item {
+      margin-bottom: 20px;
+      cursor: pointer;
+      display: inline-block;
+   }
+   &__link {
+      color: $green-c;
+      font-size: 16px;
+      font-weight: 700;
+   }
+}
+
+.button {
+   @include size(25px, 15px);
+   cursor: pointer;
+   position: relative;
+   &__line {
+      @include size(100%, 2px);
+      @include align($pos: absolute);
+      background: $green-c;
+      &::before,
+      &::after {
+         @include size(100%);
+         @include pos($l: 0);
+         content: "";
+         background: $green-c;
+         transition: $transition;
+      }
+      &::before {
+         bottom: 7px;
+      }
+      &::after {
+         top: 7px;
+      }
+   }
+   &--active {
+      .button {
+         &__line {
+            background: transparent;
+            &::before {
+               transform: rotate(-45deg);
+               bottom: 0;
+            }
+            &::after {
+               transform: rotate(45deg);
+               top: 0;
+            }
+         }
+      }
+   }
+}
+
+@media (min-width: 540px) {
+   .navigation{
+      width: 100%;
+      &__list{
+         flex-direction: row;
+         justify-content: flex-end;
+      }
+      &__item{
+         margin: 30px 0 0 50px;
+      }
+   }
+}
+
+@media (min-width: $tablet) {
+   .button {
+      display: none;
+   }
+   .navigation{
+      &__item{
+         margin-left: 20px;
+      }
+   }
+}

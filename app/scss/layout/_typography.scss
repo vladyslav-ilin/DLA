@@ -1,0 +1,52 @@
+.logo {
+   &__img {
+      @include size(60px, 50px);
+   }
+}
+
+.search {
+   &__form {
+      @include size(100%, 35px);
+      background: #fff;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      margin: 35px 0 30px;
+   }
+   &__search {
+      padding: 5px 10px 5px 0;
+      width: 100%;
+      color: #bfbfbf;
+      font-size: 14px;
+      &::placeholder {
+         color: #bfbfbf;
+         font-size: 14px;
+         line-height: 35px;
+      }
+   }
+   &__icon {
+      font-size: 20px;
+      margin-right: 15px;
+   }
+}
+
+@media (min-width: 540px) {
+   
+   .search {
+      &__form {
+         width: 50%;
+         margin: 0;
+         order: 5;
+         margin-top: 30px;
+      }
+   }
+}
+
+@media (min-width: $laptop) {
+   .search {
+      &__form {
+         width: 410px;
+      }
+   }
+}

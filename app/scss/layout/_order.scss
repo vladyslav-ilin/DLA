@@ -1,0 +1,61 @@
+@media (min-width: 540px) {
+   .logo {
+      order: 1;
+   }
+   .social {
+      order: 2;
+   }
+   .contact {
+      &--tel {
+         order: 4;
+         width: 170px;
+      }
+      &--map {
+         margin: 0;
+         order: 3;
+      }
+      &__icon {
+         &--tel {
+            display: block;
+         }
+      }
+   }
+   .menu {
+      &--active {
+         height: 30vh;
+      }
+      &__language {
+         order: 5;
+      }
+   }
+   .search {
+      &__form {
+         order: 7;
+         width: 100%;
+      }
+   }
+   .button {
+      order: 6;
+   }
+   .navigation {
+      order: 8;
+   }
+}
+
+@media (min-width: $tablet) {
+   .search {
+      &__form {
+         margin-top: 0;
+         width: 30%;
+         order: 5;
+      }
+   }
+   .menu {
+      &--active {
+         height: auto;
+      }
+      &__language {
+         order: 7;
+      }
+   }
+}

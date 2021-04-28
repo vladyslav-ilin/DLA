@@ -1,0 +1,16 @@
+.social {
+   display: none;
+   &__list {
+         font-size: 18px;
+         margin: 0 25px;
+      }
+      &__link {
+         color: #000;
+      }
+}
+
+@media (min-width: $laptop) {
+   .social {
+      display: flex;
+   }
+}

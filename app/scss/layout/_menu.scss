@@ -1,0 +1,74 @@
+.menu {
+   @include pos($t: 0, $r: 0, $l: 0, $z:100, $pos: fixed);
+   transition: all 0.5s ease;
+   height: 75px;
+   overflow: hidden;
+   padding: 15px 20px 0;
+   background: $bgr-c;
+   &--active {
+      height: 55vh;
+   }
+   &__wrapper {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+   }
+}
+
+.contact {
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   cursor: pointer;
+   width: 70%;
+   &__text {
+      font-size: 12px;
+      color: #000;
+      line-height: 14px;
+      display: inline-block;
+      &--tel {
+         font-weight: 700;
+         border-bottom: 1px dashed #000;
+         margin-bottom: 3px;
+      }
+   }
+   &--tel {
+      width: max-content;
+   }
+   &--map {
+      width: 200px;
+      margin: 0 auto;
+   }
+   &__icon {
+      height: 35px;
+      min-width: 35px;
+      background: #fff;
+      margin-right: 10px;
+      position: relative;
+      border-radius: 50px;
+      &--tel {
+         display: none;
+      }
+   }
+   &__info {
+      @include align(true, true, absolute);
+      color: $green-c;
+      font-size: 20px;
+   }
+}
+
+@media (min-width: $tablet) {
+   .menu{
+      height: auto;
+      position: relative;
+      padding: 0;
+   }
+   .contact {
+      margin: 0;
+      &--tel {
+         display: flex;
+      }
+   }
+}

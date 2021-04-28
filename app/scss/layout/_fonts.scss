@@ -1,0 +1,50 @@
+// @include font-face('SF Pro Display Light', '/fonts/sf_pro_display/SFProDisplay-Light');
+@include font-face('SF Pro Display', '/fonts/sf_pro_display/SFProDisplay-Regular');
+// @include font-face('SF Pro Display Bold', '/fonts/sf_pro_display/SFProDisplay-Bold');
+
+@include font-face("icomoon", "/css/fonts/icomoon/icomoon", $ver: "?kdnzut");
+[class^="icon-"],
+[class*=" icon-"] {
+   /* use !important to prevent issues with browser extensions that change fonts */
+   font-family: "icomoon" !important;
+   font-style: normal;
+   font-weight: normal;
+   font-variant: normal;
+   text-transform: none;
+   line-height: 1;
+
+   /* Better Font Rendering =========== */
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-down:before {
+   content: "\e900";
+}
+.icon-arrow-right:before {
+   content: "\e901";
+}
+.icon-fb:before {
+   content: "\e902";
+}
+.icon-inst:before {
+   content: "\e903";
+}
+.icon-mail:before {
+   content: "\e904";
+}
+.icon-mark:before {
+   content: "\e905";
+}
+.icon-search:before {
+   content: "\e906";
+}
+.icon-tel:before {
+   content: "\e907";
+}
+.icon-tw:before {
+   content: "\e908";
+}
+.icon-vk:before {
+   content: "\e909";
+}
