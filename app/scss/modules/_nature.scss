@@ -1,0 +1,22 @@
+.nature{
+   &__item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid #bcbcbc;
+      padding-bottom: 15px;
+      &:last-child{
+         border-bottom: none;
+      }
+   }
+   &__logo{
+      width: 135px;
+      display: block;
+      margin-right: 20px;
+   }
+   &__img{
+      @include size(100%);
+      display: block;
+      object-fit: cover;
+   }
+}

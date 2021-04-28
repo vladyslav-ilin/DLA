@@ -57,7 +57,7 @@
       }
    }
 
-   &__box{
+   &__box {
       margin-bottom: 30px;
    }
    &__file {
@@ -74,36 +74,36 @@
          color: $green-c;
       }
    }
-   &__map{
-      background: url('../../images/latin/latin-bgr.png') no-repeat center;
+   &__map {
+      background: url("../../images/latin/latin-bgr.png") no-repeat center;
       background-size: contain;
       padding: 10%;
-         &--img{
-            @include size(100%);
-            max-width: 340px;
-            max-height: 170px;
-            margin: 0 auto;
-            object-fit: cover;
-            display: block;
-            padding: 40px 0 20px;
-         }
-         &--text{
-            font-weight: 500;
-            font-size: 13px;
-            font-style: italic;
-            max-width: 340px;
-            margin: 0 auto;
-            line-height: 20px;
-         }
+      &--img {
+         @include size(100%);
+         max-width: 340px;
+         max-height: 170px;
+         margin: 0 auto;
+         object-fit: cover;
+         display: block;
+         padding: 40px 0 20px;
       }
+      &--text {
+         font-weight: 500;
+         font-size: 13px;
+         font-style: italic;
+         max-width: 340px;
+         margin: 0 auto;
+         line-height: 20px;
+      }
+   }
 }
 
-.industry{
-   &__map{
-      background: url('../../images/latin/page-2/latin-bgr-2.png') no-repeat center;
+.industry {
+   &__map {
+      background: url("../../images/latin/page-2/latin-bgr-2.png") no-repeat center;
       background-size: contain;
       padding: 0 0 0 10px;
-      &--img{
+      &--img {
          width: 50%;
          margin: 0;
          max-width: 100%;
@@ -154,33 +154,33 @@
          font-size: 15px;
          line-height: 24px;
       }
-      
-      &__box{
+
+      &__box {
          display: flex;
          align-items: center;
          justify-content: space-between;
       }
-      &__tour{
+      &__tour {
          width: 45%;
       }
-      &__map{
+      &__map {
          width: 45%;
-         &--text{
+         &--text {
             font-size: 15px;
             line-height: 24px;
          }
       }
    }
 
-   .industry{
-      &__box{
+   .industry {
+      &__box {
       }
-      &__tour{
-width: 100%;
+      &__tour {
+         width: 100%;
       }
-      &__map{
-// width: 100%;
-float: right;
+      &__map {
+         // width: 100%;
+         float: right;
       }
    }
 }
