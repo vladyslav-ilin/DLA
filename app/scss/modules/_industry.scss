@@ -1,0 +1,28 @@
+.industry {
+   &__map {
+      background: url("../../images/latin/page-2/latin-bgr-2.png") no-repeat center;
+      background-size: contain;
+      padding: 0 0 0 10px;
+      order: 1;
+      &--img {
+         width: 50%;
+         margin: 0;
+         max-width: 100%;
+         max-height: 100%;
+         padding: 0 0 20px 0;
+      }
+   }
+}
+
+@media (min-width: $tablet) {
+   .industry {
+      &__tour {
+         width: 100%;
+      }
+      &__map {
+         float: right;
+         order: 0;
+         margin: 20px 0 20px 25px;
+      }
+   }
+}

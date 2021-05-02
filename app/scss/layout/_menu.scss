@@ -6,7 +6,7 @@
    padding: 15px 20px 0;
    background: $bgr-c;
    &--active {
-      height: 55vh;
+      height: 80vh;
    }
    &__wrapper {
       position: relative;
@@ -64,6 +64,9 @@
       height: auto;
       position: relative;
       padding: 0;
+      // &--active {
+      //    height: 50vh;
+      // }
    }
    .contact {
       margin: 0;

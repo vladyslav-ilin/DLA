@@ -2,7 +2,7 @@
 @include font-face('SF Pro Display', '/fonts/sf_pro_display/SFProDisplay-Regular');
 // @include font-face('SF Pro Display Bold', '/fonts/sf_pro_display/SFProDisplay-Bold');
 
-@include font-face("icomoon", "/css/fonts/icomoon/icomoon", $ver: "?kdnzut");
+@include font-face("icomoon", "/fonts/icomoon/icomoon", $ver: "?kdnzut");
 [class^="icon-"],
 [class*=" icon-"] {
    /* use !important to prevent issues with browser extensions that change fonts */

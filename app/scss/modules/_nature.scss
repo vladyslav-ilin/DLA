@@ -1,22 +1,67 @@
-.nature{
-   &__item{
+.nature {
+   padding-bottom: 50px;
+   &__list {
+      background: url("../../images/food/map.png") no-repeat center;
+      background-size: contain;
+   }
+   &__item {
+      max-width: 400px;
       display: flex;
       justify-content: center;
       align-items: center;
       border-bottom: 1px solid #bcbcbc;
       padding-bottom: 15px;
-      &:last-child{
+      margin: 0 auto;
+      &:last-child {
          border-bottom: none;
       }
    }
-   &__logo{
+   &__logo {
       width: 135px;
       display: block;
       margin-right: 20px;
    }
-   &__img{
+   &__img {
       @include size(100%);
       display: block;
       object-fit: cover;
+   }
+}
+
+@media (min-width: $tablet) {
+   .nature {
+      &__list{
+         display: flex;
+         justify-content: space-around;
+      }
+      &__item{
+         display: flex;
+         flex-direction: column;
+         border-color: transparent;
+      }
+   }
+}
+
+@media (min-width: $laptop) {
+   .nature {
+      &__wrapper {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+      &__list {
+         width: 49%;
+         flex-direction: column;
+      }
+      &__item{
+         flex-direction: row;
+         border-color: #bcbcbc;
+      }
+      &__content {
+         width: 49%;
+      }
+      &__logo {
+         width: 100%;
+      }
    }
 }
