@@ -13,8 +13,9 @@
       align-items: center;
       padding: 10px;
       margin: 35px 0 30px;
+      display: flex;
    }
-   &__search {
+   &__input {
       padding: 5px 10px 5px 0;
       width: 100%;
       color: #bfbfbf;
@@ -28,11 +29,102 @@
    &__icon {
       font-size: 20px;
       margin-right: 15px;
+      transition: $transition;
+      order: -1;
+   }
+}
+
+.location {
+   background: url("../../images/latin/page-3/brazil-bgr.png") no-repeat center;
+   background-size: contain;
+   padding-bottom: 30px;
+   &--piramid {
+      background: url("../../images/latin/latin-bgr.png") no-repeat center;
+      background-size: contain;
+   }
+   &--america {
+      background: url("../../images/latin/page-2/latin-bgr-2.png") no-repeat center;
+      background-size: contain;
+      order: 3;
+   }
+   &--mountain {
+      background: url("../../images/latin/page-3/brazil-bgr.png") no-repeat center;
+      background-size: contain;
+   }
+   &__img {
+      margin: 0 auto 30px;
+      object-fit: contain;
+      display: block;
+      &--piramid {
+         max-width: 300px;
+      }
+      &--mountain {
+         max-width: 300px;
+      }
+   }
+   &__info {
+      max-width: 340px;
+      margin: 0 auto;
+   }
+   &__text {
+      font-weight: 500;
+      font-size: 13px;
+      font-style: italic;
+      margin-bottom: 30px;
+      line-height: 20px;
+   }
+   &__btn {
+      display: none;
+      transition: $transition;
+      outline: none;
+   }
+}
+
+.contact {
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   cursor: pointer;
+   width: 70%;
+   &__text {
+      font-size: 12px;
+      color: #000;
+      line-height: 14px;
+      display: inline-block;
+      &--tel {
+         font-weight: 700;
+         border-bottom: 1px dashed #000;
+         padding-bottom: 3px;
+      }
+   }
+   &--tel {
+      width: max-content;
+   }
+   &--map {
+      width: 200px;
+      margin: 0 auto;
+   }
+   &__icon {
+      height: 35px;
+      min-width: 35px;
+      background: #fff;
+      margin-right: 10px;
+      position: relative;
+      border-radius: 50px;
+      transition: $transition;
+      &--tel {
+         display: none;
+      }
+   }
+   &__info {
+      @include align(true, true, absolute);
+      color: $green-c;
+      font-size: 20px;
+      transition: $transition;
    }
 }
 
 @media (min-width: 540px) {
-   
    .search {
       &__form {
          width: 50%;
@@ -43,10 +135,93 @@
    }
 }
 
+@media (min-width: $tablet) {
+   .location {
+      padding: 70px 0 50px 130px;
+      width: 49%;
+      &--america {
+         float: right;
+         order: 0;
+      }
+      &--mountain {
+         padding: 70px 0 100px 130px;
+      }
+      &__btn {
+         display: flex;
+         align-items: center;
+         font-size: 16px;
+         color: #fff;
+         font-weight: 700;
+         background: $green-c;
+         border-radius: 60px;
+         padding: 10px 25px;
+         cursor: pointer;
+      }
+      &__icon {
+         font-size: 20px;
+         margin-left: 10px;
+         margin-top: 2px;
+      }
+      &__img {
+         &--piramid {
+            max-width: 100%;
+         }
+      }
+   }
+
+   .contact {
+      margin: 0;
+      &--tel {
+         display: flex;
+      }
+   }
+}
+
 @media (min-width: $laptop) {
    .search {
       &__form {
          width: 410px;
+         &:hover {
+            .search__icon {
+               color: #bfbfbf;
+            }
+         }
+      }
+      &__input{
+         &:focus{
+            & + .search__icon{
+               color: #bfbfbf;
+            }
+         }
+      }
+   }
+   
+   .contact {
+      margin-left: 5px;
+      &:hover{
+         .contact__icon{
+            background: $green-c;
+         }
+         .contact__info{
+            color: #fff;
+         }
+      }
+      &__icon {
+         margin-right: 20px;
+      }
+      &__text {
+         &--mail {
+            border-bottom: 1px dashed #000;
+            padding-bottom: 3px;
+         }
+      }
+   }
+
+   .location{
+      &__btn{
+         &:hover{
+            background: rgba(0, 142, 102, 0.9);
+         }
       }
    }
 }

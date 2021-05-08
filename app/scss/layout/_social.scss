@@ -6,11 +6,21 @@
       }
       &__link {
          color: #000;
+         transition: $transition;
       }
 }
 
 @media (min-width: $laptop) {
    .social {
       display: flex;
+      &__list{
+         &:hover{
+            .social__link {
+               transform: scale(1.2);
+               color: $green-c;
+               display: inline-block
+            }
+         }
+      }
    }
 }

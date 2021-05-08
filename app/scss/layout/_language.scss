@@ -1,0 +1,47 @@
+.language {
+   cursor: pointer;
+   font-size: 12px;
+   position: relative;
+
+   &--active {
+      .language__list {
+         max-height: 400%;
+      }
+      .language__head {
+         border-bottom-color: transparent;
+         // margin-bottom: 5px;
+      }
+      .language__item {
+         &:hover {
+            color: $green-c;
+         }
+      }
+   }
+
+   &__head {
+      border-bottom: 1px dashed #000;
+      padding-bottom: 4px;
+      display: flex;
+      align-items: center;
+      transition: $transition;
+   }
+
+   &__icon {
+      margin-left: 10px;
+      font-size: 10px;
+   }
+
+   &__list {
+      @include pos($t: 100%, $l: 0, $r: 0);
+      transition: $transition;
+      margin-top: 5px;
+      overflow: hidden;
+      max-height: 0;
+   }
+
+   &__item {
+      transition: 0.15s background ease-in;
+      margin-bottom: 10px;
+      cursor: pointer;
+   }
+}

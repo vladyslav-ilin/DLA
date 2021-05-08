@@ -1,12 +1,12 @@
 .menu {
-   @include pos($t: 0, $r: 0, $l: 0, $z:100, $pos: fixed);
+   @include pos($t: 0, $r: 0, $l: 0, $z: 100, $pos: fixed);
    transition: all 0.5s ease;
    height: 75px;
    overflow: hidden;
    padding: 15px 20px 0;
    background: $bgr-c;
    &--active {
-      height: 80vh;
+      height: 450px;
    }
    &__wrapper {
       position: relative;
@@ -15,63 +15,48 @@
       align-items: center;
       justify-content: space-between;
    }
+   &__language {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      border-bottom: 1px dashed #000;
+      padding-bottom: 4px;
+      cursor: pointer;
+      
+      &--icon {
+         margin-left: 10px;
+         font-size: 10px;
+      }
+   }
 }
 
-.contact {
-   display: flex;
-   justify-content: start;
-   align-items: center;
-   cursor: pointer;
-   width: 70%;
-   &__text {
-      font-size: 12px;
-      color: #000;
-      line-height: 14px;
-      display: inline-block;
-      &--tel {
-         font-weight: 700;
-         border-bottom: 1px dashed #000;
-         margin-bottom: 3px;
+@media (min-width: 540px) {
+   .menu {
+      &--active {
+         height: 270px;
       }
-   }
-   &--tel {
-      width: max-content;
-   }
-   &--map {
-      width: 200px;
-      margin: 0 auto;
-   }
-   &__icon {
-      height: 35px;
-      min-width: 35px;
-      background: #fff;
-      margin-right: 10px;
-      position: relative;
-      border-radius: 50px;
-      &--tel {
-         display: none;
-      }
-   }
-   &__info {
-      @include align(true, true, absolute);
-      color: $green-c;
-      font-size: 20px;
    }
 }
 
 @media (min-width: $tablet) {
-   .menu{
+   .menu {
+      &--active {
+         height: 20vh;
+      }
+   }
+}
+
+@media (min-width: $laptop) {
+   .menu {
       height: auto;
       position: relative;
       padding: 0;
-      // &--active {
-      //    height: 50vh;
-      // }
-   }
-   .contact {
-      margin: 0;
-      &--tel {
-         display: flex;
+      &__language {
+      font-size: 14px;
+      margin-left: 5px;
+      &--icon {
+         font-size: 14px;
       }
+   }
    }
 }

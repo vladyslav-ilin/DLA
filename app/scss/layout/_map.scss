@@ -1,0 +1,12 @@
+#map {
+   @include size(100%, 350px);
+   margin-bottom: 60px;
+}
+
+@media (min-width: $laptop) {
+   #map {
+      @include size(75%, 350px);
+      text-align: right;
+      margin: 0 0 80px 25%;
+   }
+}

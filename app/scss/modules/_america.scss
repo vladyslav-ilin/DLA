@@ -9,7 +9,6 @@
 
    &__img {
       @include size(100%);
-      // @include pos($t:0, $l:0, $r:0, $b:0);
       display: block;
       object-fit: cover;
    }
@@ -54,6 +53,8 @@
          font-weight: 700;
          font-size: 14px;
          width: 140px;
+         color: $text-c;
+         line-height: 21px;
       }
    }
 
@@ -72,28 +73,7 @@
       &--text {
          font-size: 14px;
          color: $green-c;
-      }
-   }
-   &__map {
-      background: url("../images/latin/latin-bgr.png") no-repeat center;
-      background-size: contain;
-      padding: 10%;
-      &--img {
-         @include size(100%);
-         max-width: 340px;
-         max-height: 170px;
-         margin: 0 auto;
-         object-fit: cover;
-         display: block;
-         padding: 40px 0 20px;
-      }
-      &--text {
-         font-weight: 500;
-         font-size: 13px;
-         font-style: italic;
-         max-width: 340px;
-         margin: 0 auto;
-         line-height: 20px;
+         transition: $transition;
       }
    }
    &__home {
@@ -140,6 +120,14 @@
          }
          &--subtext {
             font-size: 64px;
+            white-space: nowrap;
+            margin-bottom: 15px;
+         }
+         &--small {
+            font-size: 36px;
+         }
+         &--text {
+            font-size: 18px;
          }
       }
       &__text {
@@ -153,14 +141,7 @@
          justify-content: space-between;
       }
       &__tour {
-         width: 45%;
-      }
-      &__map {
-         width: 45%;
-         &--text {
-            font-size: 15px;
-            line-height: 24px;
-         }
+         width: 50%;
       }
       &__home {
          display: block;
@@ -178,6 +159,7 @@
          width: 24%;
          &--2 {
             height: 225px;
+            margin-top: 105px;
          }
       }
       &__info {
@@ -185,6 +167,21 @@
          padding: 5%;
          &--text {
             width: 200px;
+         }
+      }
+      &__title {
+         font-size: 36px;
+         &--global {
+            width: 210%;
+         }
+      }
+      &__file {
+         &:hover {
+            .america__file {
+               &--text {
+                  color: #000;
+               }
+            }
          }
       }
    }
