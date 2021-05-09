@@ -3,16 +3,13 @@
    font-size: 12px;
    position: relative;
    width: 40px;
-   order: 5;
 
    &--active {
       .language__list {
          max-height: 400%;
+         z-index: 20;
       }
-      .language__head {
-         border-bottom-color: transparent;
-         // margin-bottom: 5px;
-      }
+
       .language__item {
          &:hover {
             color: $green-c;
@@ -21,8 +18,7 @@
    }
 
    &__head {
-      border-bottom: 1px dashed #000;
-      padding-bottom: 4px;
+      padding: 0 0 4px 5px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -39,16 +35,22 @@
       overflow: hidden;
       max-height: 0;
       background: $bgr-c;
-      z-index: 10;
+      border-radius: 10px;
+      width: 40px;
    }
 
    &__item {
       transition: 0.15s background ease-in;
       // margin-bottom: 10px;
-      padding: 5px 0;
+      padding: 5px 0 5px 5px;
       cursor: pointer;
-      
    }
+}
+
+@media (min-width: 510px) {
+.language{
+   order: 5;
+}
 }
 
 @media (min-width: $laptop) {

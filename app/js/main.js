@@ -29,7 +29,7 @@ function toggleInput() {
 function choiseSelect() {
    let text = this.innerText;
    let currentText = this.closest('.language').querySelector('.language__current')
-   console.log(currentText);
+   // console.log(currentText);
    currentText.innerText = text;
 
    addSelect();
