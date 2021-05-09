@@ -20,12 +20,6 @@
          }
       }
    }
-   .menu {
-      
-      &__language {
-         order: 5;
-      }
-   }
    .search {
       &__form {
          order: 7;
@@ -46,18 +40,6 @@
          margin-top: 0;
          width: 30%;
          order: 5;
-      }
-   }
-   .menu {
-      
-      
-   }
-}
-
-@media (min-width: $laptop) {
-   .menu {
-      &__language {
-         order: 7;
       }
    }
 }

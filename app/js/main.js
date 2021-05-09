@@ -4,14 +4,18 @@
    let button = document.querySelector('.button');
    button.addEventListener('click', toggleBtn);
 
-   let openLanguage = document.querySelector('.language__head');
-   openLanguage.addEventListener('click', addLanguage);
+   let openSelect = document.querySelector('.language__head');
+   openSelect.addEventListener('click', addSelect);
 
-   let itemLanguage = document.querySelector('.language__item');
-   itemLanguage.addEventListener('click', choiseItem);
+   let itemSelect = document.querySelectorAll('.language__item');
+   itemSelect.forEach(item => {
+      item.addEventListener('click', choiseSelect);
+   });
+
 })();
 
-function addLanguage() {
+
+function addSelect() {
    let addClass = document.querySelectorAll('.language');
    addClass.forEach(item => {
       item.addEventListener('click', toggleInput);
@@ -22,13 +26,13 @@ function toggleInput() {
    this.classList.toggle('language--active');
 };
 
-function choiseItem() {
+function choiseSelect() {
    let text = this.innerText;
    let currentText = this.closest('.language').querySelector('.language__current')
    console.log(currentText);
    currentText.innerText = text;
 
-   addLanguage();
+   addSelect();
 }
 
 function toggleBtn() {
