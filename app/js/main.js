@@ -24,6 +24,13 @@ function addSelect() {
 
 function toggleInput() {
    this.classList.toggle('language--active');
+
+   window.addEventListener('click', event => {
+      const target = event.target;
+      if (!target.closest('.language__head') && !target.closest('.language__list')) {
+         this.classList.remove('language--active');
+      }
+   })
 };
 
 function choiseSelect() {

@@ -1,7 +1,7 @@
 .menu {
    @include pos($t: 0, $r: 0, $l: 0, $z: 100, $pos: fixed);
    transition: all 0.5s ease;
-   height: 75px;
+   height: 85px;
    overflow: hidden;
    padding: 15px 20px 0;
    background: $bgr-c;
